@@ -1,19 +1,22 @@
 body {
   background-image: url("../assets/img/fondo.png");
-  background-size: cover;
+  background-size: auto;
+  background-position: top;
   margin: 0;
   padding: 0;
 }
 
 .other-body {
   background-image: none;
-  background-color: #a0a0a06f;
+  background-color: rgba(20, 65, 78, 0.4);
 }
 
 header {
+  height: 50px;
+  width: 100%;
   display: grid;
-  padding: 10px 20px;
-  background-color: #ffffff;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
   place-items: center;
 }
 
@@ -26,23 +29,28 @@ header .row {
 .logo-container {
   display: grid;
   align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
 .logo {
   width: 90px;
   height: auto;
   margin-left: -350px;
+  height: 50px;
+  width: 140px;
 }
 .logo-container {
   display: grid;
   place-items: start;
+  margin-left: -100px;
 }
 
 .carrito {
   float: right;
   margin-left: 10px;
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 25px;
 }
 
 nav ul {
@@ -50,6 +58,8 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  align-items: center;
 }
 
 nav ul li {
@@ -71,14 +81,16 @@ nav button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #0000ff;
-  border: none;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  font-size: 50px;
 }
 
 footer {
@@ -93,6 +105,7 @@ footer button {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .contact-container {
@@ -125,11 +138,15 @@ footer button {
 .product {
   text-align: center;
   margin: 20px;
+  border-color: red;
+  border-radius: 20px;
 }
 
 .product img {
-  width: 150px;
-  height: auto;
+  width: 250px;
+  height: 250px; /* Establece la altura fija deseada */
+  object-fit: cover; /* Ajustar y recortar la imagen para que se ajuste al contenedor sin deformaciones */
+  border-radius: 30px;
 }
 
 .product h3 {
@@ -145,10 +162,29 @@ footer button {
 
 .centered-container {
   text-align: center;
-  margin-top: 50vh;
-  transform: translateY(-50%);
+  margin-top: 25vh;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 65px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
 }
 
+.footer-end {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.about-us-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
 /* Estilos para pantallas de hasta 600px */
 
 @media (max-width: 1200px) {
@@ -192,7 +228,9 @@ footer button {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
   }
   .products-container {
     grid-template-columns: repeat(4, 1fr);
@@ -202,57 +240,151 @@ footer button {
     max-width: 100%;
     height: auto;
   }
+  .footer-end {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .centered-container {
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    font-size: 30px;
+  }
 
-  /* Estilos adicionales para pantallas de hasta 600px */
+  /* Estilos para pantallas de hasta 600px */
   @media (max-width: 600px) {
+    /* Modificar tamaños de fuentes y márgenes */
+
+    nav ul li a {
+      font-size: 16px;
+    }
+    .button,
+    nav button,
+    footer button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    /* Modificar tamaños de logotipo y carrito */
     .logo {
-      width: 40px;
-      margin-left: -5px;
+      width: 60px;
+      height: auto;
+      margin-left: 40px;
       margin-right: 20px;
     }
-
     .carrito {
       margin-left: 5px;
-      width: 30px;
+      width: 20px;
+      height: auto;
+      margin-top: 5px;
     }
 
+    /* Modificar tamaños de imágenes de productos */
+    .product img {
+      width: 100%;
+      height: 280px; /* Ajusta la altura deseada */
+      object-fit: fill;
+      border-radius: 20px;
+    }
+
+    /* Modificar tamaño del header */
     header {
+      height: 50px;
+      width: 100%;
+      display: grid;
       padding: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      place-items: center;
     }
 
-    nav ul li {
-      margin-right: 2px;
+    /* Modificar tamaño del container centrado */
+    .centered-container {
+      text-align: center;
+      margin-top: 25vh;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.75);
+      height: 30px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
     }
-
-    .button,
-    nav button {
-      padding: 8px 16px;
-      font-size: 10px;
-    }
-
     h1 {
-      margin-top: 10px;
+      text-align: center;
+      font-size: 18px;
     }
+  }
+  /* Estilos para pantallas de hasta 1200px */
+  @media (min-width: 601px) and (max-width: 1200px) {
+    /* Modificar tamaños de fuentes y márgenes */
 
-    footer button {
-      padding: 8px 16px;
-      font-size: 10px;
-    }
     nav ul li a {
-      font-size: 12px; /* Tamaño de fuente ajustado para dispositivos móviles */
-      margin-left: 5px;
-    }
-
-    h1 {
       font-size: 20px;
     }
-    .products-container {
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1px;
+    .button,
+    nav button,
+    footer button {
+      padding: 8px 12px;
+      font-size: 16px;
     }
-    .product img {
-      max-width: 100%;
+
+    /* Modificar tamaños de logotipo y carrito */
+    .logo {
+      width: 80px;
       height: auto;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .carrito {
+      margin-left: 5px;
+      width: 25px;
+      height: auto;
+      margin-top: 0px;
+    }
+
+    /* Modificar tamaños de imágenes de productos */
+    .product img {
+      width: 100%;
+      height: 150px; /* Ajusta la altura deseada */
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* Modificar tamaño del header */
+    header {
+      height: 50px;
+      width: 100%;
+      display: grid;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      place-items: center;
+    }
+
+    /* Modificar tamaño del container centrado */
+    .centered-container {
+      text-align: center;
+      margin-top: 25vh;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.75);
+      height: 40px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 15px;
     }
   }
 }
