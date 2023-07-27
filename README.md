@@ -30,3 +30,23 @@ Flexbox: En el código CSS, se utilizan propiedades Flexbox como display: flex, 
 Bootstrap: Se utiliza el enlace a la hoja de estilos de Bootstrap para agregar el diseño y los estilos predefinidos al sitio web
 
 Media Queries: Se utilizan Media Queries en el archivo CSS para aplicar estilos específicos para diferentes tamaños de pantalla. Esto indica que el sitio web está diseñado para ser responsivo y se adaptará a diferentes dispositivos y tamaños de pantalla
+
+**------------------------------------------------------------------------------------**
+
+**Versión 2.0.0**
+
+**Cambios realizados:**
+
+Se agregaron animaciones a los botones, al título de inicio de página y a las tarjetas para mejorar la interactividad y proporcionar una experiencia de usuario más atractiva.
+
+Se implementaron técnicas SEO, como la adición de meta tags, description y keywords, para mejorar la visibilidad del sitio en los motores de búsqueda y aumentar el tráfico orgánico.
+
+Se creó un archivo SCSS y se utilizó Sass para convertirlo en CSS de forma dinámica, lo que permitió mantener un código más limpio y organizado, y facilitó la actualización y modificación de estilos de manera más eficiente.
+
+Se agregó un favicon para establecer una identidad visual más sólida y reconocible para el sitio web.
+
+Se añadieron atributos alt a las imágenes de los productos para mejorar la accesibilidad y ayudar a los motores de búsqueda a comprender el contenido visual del sitio.
+
+Se actualizó el archivo README.md con la información de la versión 2.0.0 y se detallaron los cambios realizados en esta nueva versión.
+
+Con estos cambios, el sitio web ha sido mejorado en términos de interactividad, experiencia del usuario, SEO y organización del código, lo que proporciona una experiencia más satisfactoria para los visitantes y aumenta la visibilidad del sitio en línea.
