@@ -16,14 +16,15 @@ body::before {
   height: 100%;
   z-index: -1;
 }
+
 .other-body {
   background-image: none;
   background-color: rgba(20, 65, 78, 0.4);
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 header {
@@ -35,36 +36,29 @@ header {
   place-items: center;
   transition: background-color 0.3s, font-size 0.3s, color 0.3s;
 }
-
 header .row {
   display: grid;
   grid-template-columns: auto 1fr;
   place-items: center;
 }
-
-.logo-container {
+header .logo-container {
   display: grid;
   align-items: center;
   justify-content: flex-start;
   margin-left: 20px;
 }
-
-.logo {
-  width: 90px;
-  height: auto;
-  margin-left: -350px;
-  height: 50px;
-  width: 140px;
+header .logo {
+  margin-left: -50px;
+  height: 25px;
+  width: auto;
 }
-
-.carrito {
+header .carrito {
   float: right;
   margin-left: 10px;
   width: auto;
   height: 25px;
 }
-
-nav ul {
+header nav ul {
   display: flex;
   list-style: none;
   margin: 0;
@@ -72,35 +66,32 @@ nav ul {
   font-size: 20px;
   align-items: center;
 }
-
-nav ul li {
+header nav ul li {
   margin-right: 10px;
 }
-
-nav ul li a {
+header nav ul li a {
   color: #000000;
   text-decoration: none;
   transition: color 0.3s;
 }
-nav ul li a:hover {
+header nav ul li a:hover {
   color: #0037ff;
 }
-.nav-container {
+header .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.button,
-nav button {
+header .button,
+header nav button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #0000ff;
-  color: #ffffff;
-  cursor: pointer;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  cursor: pointer;
+  background-color: #0000ff;
+  color: #ffffff;
 }
 
 h1 {
@@ -110,13 +101,17 @@ h1 {
 
 .footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.556);
   padding: 10px;
   text-align: center;
-  z-index: -1;
+}
+.divider {
+  width: 100%;
+  background-color: #ccc; /* Cambia el color según tus preferencias */
+  margin-top: 200px; /* Ajusta el margen superior según tus preferencias */
 }
 
 .contact-container {
@@ -134,43 +129,37 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
 .contact-container:hover {
   transform: scale(1.05);
 }
-
-.contact-info,
-.map {
+.contact-container .contact-info,
+.contact-container .map {
   flex-basis: 40%;
   margin-bottom: 20px;
 }
-
-.map img {
+.contact-container .map img {
   width: 100%;
   height: auto;
 }
-
-.contact-info h2 {
+.contact-container .contact-info h2 {
   margin-bottom: 10px;
 }
-
-.contact-info p {
+.contact-container .contact-info p {
   margin: 5px 0;
 }
 
 .product {
   display: flex;
   align-items: center;
-  background-color: #ffffffc4;
+  background-color: rgba(255, 255, 255, 0.768627451);
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 3px solid #00000098;
+  border: 3px solid rgba(0, 0, 0, 0.5960784314);
   width: 80%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-
 .product h3 {
   margin: 0;
   padding: 20px;
@@ -182,18 +171,20 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
 }
+
 .btn-delete {
-  background-color: #ff0000c6;
-  color: #ffffff;
-  border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
   cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.7764705882);
+  color: #ffffff;
   margin-top: 10px;
   margin-left: 50px;
   transition: transform 0.4s ease, background-color 0.4s ease;
 }
-
 .btn-delete:hover {
   background-color: #ff5e00;
   transform: scale(1.15);
@@ -205,9 +196,10 @@ h1 {
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 8px;
-  background-color: #0000ffc6;
+  background-color: rgba(0, 0, 255, 0.7764705882);
   color: #fff;
   text-decoration: none;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -215,7 +207,6 @@ h1 {
   transition: background-color 0.3s;
   border: 2px solid #000000;
 }
-
 .btn-products::after {
   position: absolute;
   top: 50%;
@@ -224,9 +215,8 @@ h1 {
   font-size: 18px;
   transition: right 0.3s;
 }
-
 .btn-products:hover {
-  background-color: #ffd000b7;
+  background-color: rgba(255, 208, 0, 0.7176470588);
   color: #fff;
   cursor: pointer;
   transform: scale(1.1);
@@ -249,11 +239,6 @@ h1 {
   transform: scale(1.05);
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------*/
-
-/* Estilos para pantallas menores a 600px */
 @media (max-width: 600px) {
   @keyframes fadeInUp {
     0% {
@@ -275,43 +260,42 @@ h1 {
   .products-page {
     background-size: cover;
   }
-
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
   }
-
   .button,
   nav button,
   footer button {
     padding: 6px 12px;
     font-size: 12px;
   }
-
   .logo {
-    width: 50px;
-    height: auto;
-    margin-left: -21px;
+    height: 15px;
+    width: auto;
+    margin-left: 30px;
     margin-right: 20px;
   }
-
+  header .logo-container {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 41px;
+  }
   .carrito {
     margin-left: 5px;
     width: 20px;
     height: auto;
     margin-top: 0px;
   }
-
   .product img {
     width: 75px;
     height: auto;
     border-radius: 20px;
   }
-
   header {
     height: 40px;
     padding: 5px;
   }
-
   .centered-container {
     background-size: cover;
     background-repeat: no-repeat;
@@ -319,23 +303,22 @@ h1 {
     border-radius: 20px;
     margin-top: 150px;
   }
-
   .centered-container h1 {
     font-size: 24px;
     margin-top: 15px;
-    animation: fadeInUp 1s ease-out; /* Agrega la animación fadeInUp */
+    animation: fadeInUp 1s ease-out;
     text-align: center;
   }
-
   .btn-products {
     display: block;
     margin: 20px auto;
     padding: 5px 10px;
     font-size: 14px;
     border-radius: 8px;
-    background-color: #0000ffc6;
+    background-color: rgba(0, 0, 255, 0.7764705882);
     color: #fff;
     text-decoration: none;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -352,9 +335,8 @@ h1 {
     font-size: 18px;
     transition: right 0.3s;
   }
-
   .btn-products:hover {
-    background-color: #ffd000b7;
+    background-color: rgba(255, 208, 0, 0.7176470588);
     color: #fff;
     cursor: pointer;
     transform: scale(1.1);
@@ -390,16 +372,14 @@ h1 {
     flex-basis: 20%;
     margin-bottom: 10px;
   }
-  /* .container {
-  } */
   .product {
     display: flex;
     align-items: center;
-    background-color: #ffffffc4;
+    background-color: rgba(255, 255, 255, 0.768627451);
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 3px solid #00000098;
+    border: 3px solid rgba(0, 0, 0, 0.5960784314);
     width: 80%;
     height: 80px;
     margin: 20px auto;
@@ -419,7 +399,7 @@ h1 {
     margin-bottom: 10px;
   }
   .btn-delete {
-    background-color: #ff0000c6;
+    background-color: rgba(255, 0, 0, 0.7764705882);
     color: #ffffff;
     padding: 10px 15px;
     border-radius: 10px;
@@ -429,8 +409,6 @@ h1 {
     font-size: 8px;
   }
 }
-
-/* Estilos para pantallas entre 600 y 1200 */
 @media (min-width: 601px) and (max-width: 1200px) {
   .cart-page {
     background-size: cover;
@@ -455,18 +433,16 @@ h1 {
   nav ul li a {
     font-size: 20px;
   }
-
   .button,
   nav button,
   footer button {
     padding: 8px 12px;
     font-size: 16px;
   }
-
   .logo {
-    width: 80px;
+    width: 60px;
     height: auto;
-    margin-left: 20px;
+    margin-left: -350px;
     margin-right: 20px;
   }
   .carrito {
@@ -475,22 +451,17 @@ h1 {
     height: auto;
     margin-top: 0px;
   }
-
   .product img {
     width: 20%;
     height: 100px;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 20px;
   }
-
   header {
     height: 50px;
-    width: 100%;
-    display: grid;
     padding: 10px;
-    place-items: center;
   }
-
   .centered-container {
     text-align: center;
     margin-top: 25vh;
@@ -507,16 +478,13 @@ h1 {
     border-radius: 40px;
     animation: fadeInUpContainer 1s ease-out;
   }
-
   .centered-container h1 {
     animation: fadeInUp 1s ease-out;
     text-align: center;
-    font-size: 20px;
+    font-size: 32px;
     margin-top: 20px;
   }
 }
-
-/* Estilos para pantallas con un minimo de 1200px */
 @media (min-width: 1201px) {
   .cart-page {
     background-size: cover;
@@ -544,40 +512,81 @@ h1 {
     margin-left: -350px;
     margin-right: 20px;
   }
-
   .carrito {
     width: 30px;
   }
-
   header {
     height: 50px;
     padding: 10px;
   }
-
   nav ul li {
     margin-right: 10px;
   }
-
   .button,
   nav button {
     padding: 10px 20px;
     font-size: 16px;
   }
-
   h1 {
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
   }
-
-  nav ul li a {
-    font-size: 20px;
-    margin-left: 10px;
+  .footer {
+    padding: 10px;
   }
-
+  .contact-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-size: 16px;
+  }
+  .contact-info,
+  .map {
+    flex-basis: 40%;
+    margin-bottom: 20px;
+  }
+  .product {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.768627451);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(0, 0, 0, 0.5960784314);
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 150px;
+  }
   .product img {
     width: 15%;
     height: 150px;
     border-radius: 20px;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+  }
+  .btn-delete {
+    background-color: rgba(255, 0, 0, 0.7764705882);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    font-size: 18px;
   }
   .centered-container {
     text-align: center;
@@ -601,4 +610,4 @@ h1 {
     animation: fadeInUp 1s ease-out;
     text-align: center;
   }
-}
+} /*# sourceMappingURL=styles.css.map */

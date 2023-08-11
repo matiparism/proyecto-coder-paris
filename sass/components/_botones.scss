@@ -1,0 +1,62 @@
+.button,
+nav button,
+footer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+.btn-delete {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.7764705882);
+  color: #ffffff;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.btn-products {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 255, 0.7764705882);
+  color: #fff;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: background-color 0.3s;
+  border: 2px solid #000000;
+}
+
+.btn-products::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: right 0.3s;
+}
+
+.btn-products:hover {
+  background-color: rgba(255, 208, 0, 0.7176470588);
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.btn-products:hover::after {
+  right: 20px;
+}

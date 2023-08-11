@@ -8,8 +8,12 @@
       content="3D Garage, Cart, Carrito de Compras, Compras en Línea, Automovilismo"
     />
     <link rel="shortcut icon" href="../assets/img/3dlogo.png" />
-    <title>Cart - 3D Garage</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <title>3D Garage - Expertos en piezas hechas en 3D</title>
+    <meta
+      name="description"
+      content="Bienvenido a 3D Garage, tu tienda en línea para artículos en 3D diseñados para entusiastas del automovilismo y pilotos apasionados. Descubre nuestra amplia selección de soportes para bomba de combustible doble, casco/volante, cámara GoPro, Fueltech, tapas para excentricas de karting, soportes para garrafa de amortiguadores, Fueltech Nano en VW gol y soportes para espejo retrovisor en jaula."
+    />
+    <link rel="stylesheet" href="../sass/styles.css" />
   </head>
   <body class="body cart-page">
     <header>
@@ -28,14 +32,14 @@
             <nav class="d-grid gap-2">
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home |</a>
+                  <a class="nav-link" href="../index.html">Principal</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../pages/about.html">About Us |</a>
+                  <a class="nav-link" href="../pages/about.html">Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../pages/contact.html"
-                    >Contact Us</a
+                    >Contacto</a
                   >
                 </li>
                 <li class="nav-item">
@@ -54,7 +58,7 @@
       </div>
     </header>
 
-    <h1>Carrito de Compras</h1>
+    <h1>Carrito</h1>
 
     <div class="container">
       <!-- Product 1 -->
@@ -161,7 +165,9 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <div class="divider"></div>
+  
+    <footer class="footer" id="page-footer">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -169,6 +175,21 @@
           </div>
         </div>
       </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const footer = document.getElementById("page-footer");
+        const isScrolledToBottom =
+          window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+        if (isScrolledToBottom) {
+          footer.style.display = "block";
+        } else {
+          footer.style.display = "none";
+        }
+      });
+    </script>
     </footer>
   </body>
 </html>

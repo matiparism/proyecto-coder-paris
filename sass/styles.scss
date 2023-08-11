@@ -1,4 +1,13 @@
 // Variables
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main-inedex";
+@import "layout/media-768";
+@import "base/reset";
+@import "components/botones";
+@import "utilities/mixins";
+@import "utilities/variables.scss";
+
 $background-image: url("../assets/img/fondo.png");
 $background-color: rgba(20, 65, 78, 0.4);
 $primary-color: #0000ff;
@@ -292,7 +301,7 @@ h1 {
   }
 
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .button,
