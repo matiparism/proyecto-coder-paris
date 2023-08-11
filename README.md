@@ -50,3 +50,13 @@ Se añadieron atributos alt a las imágenes de los productos para mejorar la acc
 Se actualizó el archivo README.md con la información de la versión 2.0.0 y se detallaron los cambios realizados en esta nueva versión.
 
 Con estos cambios, el sitio web ha sido mejorado en términos de interactividad, experiencia del usuario, SEO y organización del código, lo que proporciona una experiencia más satisfactoria para los visitantes y aumenta la visibilidad del sitio en línea.
+
+**Versión 3.0.0**
+
+Se agregaron los archivos correspondientes de sass,scss,css, con la reestructura mejorada y orden de carpetas
+
+Se mejoro el footer de cada pagina y el header haciendolo mas clean y visible en todos los aspectos
+
+El title se modifico para mejorar los motores de busqueda, meta description en todas las paginas y lo veo responsive para todos los tamanos que veo en inspectores.
+
+
